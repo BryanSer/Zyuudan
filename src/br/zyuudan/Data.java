@@ -7,20 +7,12 @@
 
 package br.zyuudan;
 
-import org.bukkit.plugin.java.JavaPlugin;
-
 /**
  *
  * @author Bryan_lzh
  * @version 1.0
  * @since 2018-11-14
  */
-public class Main extends JavaPlugin{
-
-    @Override
-    public void onEnable() {
-        Data.Plugin = this;
-        FileManager.init();
-    }
-    
+public class Data {
+    public static Main Plugin;
 }
