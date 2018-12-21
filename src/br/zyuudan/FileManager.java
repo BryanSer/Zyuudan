@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 /**
@@ -47,13 +48,5 @@ public class FileManager {
             return;
         }
         YamlConfiguration config = YamlConfiguration.loadConfiguration(f);
-        Object get = config.get("Base.Spread");
-        System.out.println(get.getClass());
-        if (get instanceof List) {
-            List<List<Integer>> list = (List<List<Integer>>) get;
-            for (List<Integer> l : list) {
-                System.out.println(l);
-            }
-        }
     }
 }
